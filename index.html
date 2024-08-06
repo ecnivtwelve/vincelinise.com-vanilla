@@ -41,6 +41,13 @@
       <img src="assets/header_hero_butterfly.png" alt="Butterfly" class="header-hero">
     </header>
 
+    <div id="warning">
+      <p id="warning-emoji">🚨</p>
+      <p id="warning-text">
+        
+      </p>
+    </div>
+
     <div class="card card-main">
       <img src="assets/papillon-banner.jpg" alt="Illustration" class="card-illustration">
       <div class="card-content">
@@ -108,4 +115,22 @@
       </p>
     </div>
   </body>
+
+  <script>
+    function showWarning(text) {
+      const warning = document.getElementById('warning');
+      const warningText = document.getElementById('warning-text');
+
+      warningText.innerText = text;
+      warning.style.display = 'flex';
+    }
+
+    function checkAnael() {
+      if (document.referrer.includes('anael')) {
+        showWarning('Hello hello ! Il semblerait que vous arrivez du site d\'Anaël. Sachez que celui ci est une personne peu recommandable qui détourne des projets open source pour ses intérets personnels, merci de ne pas le suivre.');
+      }
+    }
+
+    checkAnael();
+  </script>
 </html>
