@@ -5,7 +5,6 @@
   color: #1A1A1A;
   margin: 0;
   padding: 0;
-  user-select: none;
 }
 
 body {
@@ -176,12 +175,35 @@ header {
   }
 }
 
+.card-small {
+  flex-direction: column;
+  height: auto;
+  max-width: 500px;
+}
+
+.card-small .card-content p {
+  height: auto;
+}
+
+.card-grid {
+  display: flex;
+  margin-top: -10px;
+  margin-bottom: 50px;
+  gap: 10px;
+}
+
+@media screen and (max-width: 750px) {
+  .card-grid {
+    flex-direction: column;
+  }
+}
+
 .ui-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   width: 100%;
   align-items: start;
-  margin-top: 50px;
+  margin-top: 30px;
   margin-bottom: 50px;
   gap: 20px;
 }
@@ -312,4 +334,26 @@ header {
 #warning-emoji {
   font-size: 30px;
   margin-right: 16px;
+}
+
+.part-title {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  justify-content: center;
+}
+
+.part-title p {
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 600;
+  width: fit-content;
+  color: #00000065;
+}
+
+.part-separator {
+  flex: 1;
+  height: 1px;
+  background-color: #00000045;
 }
